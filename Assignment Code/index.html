@@ -28,12 +28,6 @@
 
 <div id ="map"></div>
 
-
-
-<div id="landmarkList"></div>
-
-<div id="details"></div>
-
 <div>
   <h2>Features:</h2>
   <ul>
@@ -41,6 +35,35 @@
     <li>Customize the route with different paths.</li>
     <li>Save and share your walking tour with others.</li>
   </ul>
+</div>
+
+<h3>Add Landmarks Information here</h3>
+<form id="landmarkform">
+    <label for="title"> Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="description"> Description:</label>
+    <input type="text" id="description" name="description" required>
+
+    <label for="image"> Image URL:</label>
+    <input type="text" id="image" name="image" required>
+
+    <label for="latitude"> Latitude:</label>
+    <input type="text" id="latitude" name="latitude" required>
+
+    <label for="longitude"> Longitude:</label>
+    <input type="text" id="longitude" name="longitude" required>
+
+    <button type="submit">Add Landmark</button>
+
+    <button type="button" onclick="useMyLocation()">Use My Location</button>
+</form>
+
+<div id="landmarkList"></div>
+
+<div id="details"></div>
+
+
 
 
 
