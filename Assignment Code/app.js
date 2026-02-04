@@ -43,6 +43,7 @@ node.addEventListener("click", function() {
     "<img src='" + item.imageUrl + "' width='200' height='200'><br>"
 });
 }
+
 }; 
 
 landmarkform.addEventListener("submit",function(event){
@@ -74,7 +75,7 @@ img.value="";
 landmarkform.reset();
   });
       
-    reader.readAsDataURL(img.files[0]);
+reader.readAsDataURL(img.files[0]);
 
 
 
