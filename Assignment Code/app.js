@@ -19,23 +19,24 @@ console.log(useLocationBtn);
 console.log(landmarkform);
 
 landmarkform.addEventListener("submit",function(event){
+
     event.preventDefault();
     console.log("Form Submitted");
 
     titleValue=title.value;
-    console.log(titleValue);
+    console.log("Title Value:",titleValue);
 
     latValue=lat.value;
-    console.log(latValue);
+    console.log("Latitude Value:",latValue);
 
     lonValue=lon.value;
-    console.log(lonValue);
+    console.log("Longitude Value:",lonValue);
     
     imgValue=img.value;
-    console.log(imgValue);
-    
+    console.log("Image URL:",imgValue);
+
     descriptionValue=description.value;
-    console.log(descriptionValue);
+    console.log("Description:",descriptionValue);
     
 });
 
