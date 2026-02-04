@@ -40,13 +40,29 @@ landmarkform.addEventListener("submit",function(event){
 landmarks.push(Landmark);
 console.log("landmarks", landmarks);
 
+
+
+landmarkList.innerHTML = "";
+
+landmarks.forEach(myFunction);
+
+function myFunction(item) {
+
 const node = document.createElement("li");
-const textnode = document.createTextNode(titleValue);
+
+const textnode = document.createTextNode(item.title);
+
 node.appendChild(textnode);
-document.getElementById("landmarkList").appendChild(node);
+landmarkList.appendChild(node);
 
-this.onclick.landmarkform.reset();
+}
+landmarkform.reset();
 
+landmarkList.addEventListener("click", function(event) {
+    console.log("Clicked on landmark:", event.target.textContent);
+});
 
 });
+
+
 
