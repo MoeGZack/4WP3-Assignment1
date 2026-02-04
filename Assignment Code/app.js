@@ -7,6 +7,7 @@ let details=document.getElementById("details");
 let description=document.getElementById("description");
 let useLocationBtn=document.getElementById("useLocation");
 let landmarkform=document.getElementById("landmarkform");
+const landmarks=[];
 
 console.log(img);
 console.log(lat);
@@ -36,8 +37,7 @@ landmarkform.addEventListener("submit",function(event){
   imageUrl: imgValue,
   description: descriptionValue
 };
-console.log(Landmark);
+landmarks.push(Landmark);
+console.log("landmarks", landmarks);
 
-    
 });
-
