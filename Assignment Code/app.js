@@ -20,7 +20,7 @@ console.log(useLocationBtn);
 console.log(landmarkform);
 
 landmarkform.addEventListener("submit",function(event){
-
+    
     event.preventDefault();
 
     let titleValue=title.value;
@@ -40,4 +40,13 @@ landmarkform.addEventListener("submit",function(event){
 landmarks.push(Landmark);
 console.log("landmarks", landmarks);
 
+const node = document.createElement("li");
+const textnode = document.createTextNode(titleValue);
+node.appendChild(textnode);
+document.getElementById("landmarkList").appendChild(node);
+
+this.onclick.landmarkform.reset();
+
+
 });
+
