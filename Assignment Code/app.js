@@ -21,22 +21,23 @@ console.log(landmarkform);
 landmarkform.addEventListener("submit",function(event){
 
     event.preventDefault();
-    console.log("Form Submitted");
 
-    titleValue=title.value;
-    console.log("Title Value:",titleValue);
+    let titleValue=title.value;
+    let latValue=lat.value;
+    let lonValue=lon.value;
+   let imgValue=img.value;
+   let descriptionValue=description.value;
 
-    latValue=lat.value;
-    console.log("Latitude Value:",latValue);
 
-    lonValue=lon.value;
-    console.log("Longitude Value:",lonValue);
-    
-    imgValue=img.value;
-    console.log("Image URL:",imgValue);
+    const Landmark = {
+  title: titleValue,
+  latitude: latValue,
+  longitude: lonValue,
+  imageUrl: imgValue,
+  description: descriptionValue
+};
+console.log(Landmark);
 
-    descriptionValue=description.value;
-    console.log("Description:",descriptionValue);
     
 });
 
