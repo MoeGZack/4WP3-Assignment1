@@ -59,3 +59,18 @@ button {
     cursor: pointer;
 }
 
+
+#details {
+    width: 400px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}

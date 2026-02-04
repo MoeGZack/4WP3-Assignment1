@@ -35,7 +35,7 @@
     <input type="text" id="longitude" name="longitude" required>
 
     <label for="img"> Select Image:</label>
-    <input type="file" id="img" name="img" accept="image/*">
+    <input type="file" id="img" name="img" accept="image/*" required>
 
     <button type="submit">Add Landmark</button>
 
@@ -51,8 +51,13 @@
     
 </div>
 
-<div id="details"></div>
+<h3>Details of Landmark</h3>
+<div id="container">
+  <div id="details"></div>
+</div>  
 
+
+  
 <script src="app.js"></script>
 </body>
 </html>
