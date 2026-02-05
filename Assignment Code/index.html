@@ -10,7 +10,7 @@
 
 <p>This Application will Allow you to create and customize walking tours for your city.</p>
 
-<div id ="map"></div>
+
 
 <div>
   <h2>Features:</h2>
@@ -20,19 +20,20 @@
   </ul>
 </div>
 
-<h3>Add Landmarks Information here</h3>
+
 <form id="landmarkform">
+  <h5>Add Landmarks Information here</h5>
     <label for="title"> Title:</label>
     <input type="text" id="title" name="title" required>
 
     <label for="description"> Description:</label>
-    <input type="text" id="description" name="description" minlength="10" maxlength="30" required>
+    <input type="text" id="description" name="description" minlength="10" maxlength="50" required>
     
     <label for="latitude"> Latitude:</label>
-    <input type="text" id="latitude" name="latitude" pattern="[0-9]+" title="please enter number only" required>
+    <input type="text" id="latitude" name="latitude" pattern="[0-9]+\.?[0-9]*" title="please enter valid numbers only" required>
 
     <label for="longitude"> Longitude:</label>
-    <input type="text" id="longitude" name="longitude" pattern="[0-9]+" title="please enter number only" required>
+    <input type="text" id="longitude" name="longitude"  pattern="[0-9]+\.?[0-9]*" title="please enter valid numbers only" required>
 
     <label for="img"> Select Image:</label>
     <input type="file" id="img" name="img" accept="image/*" required>
@@ -43,9 +44,14 @@
 
 </form>
 
+<div id ="map"></div>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5_oEL9APRRv_hhN-IaXeyhS6s1m3i-7g&callback=initMap&v=weekly&libraries=marker"
+    defer
+  ></script>
 
 <div>
-    <h2>Landmark List:</h2>
+    <h2>Landmark List, Select a Landmark Below:</h2>
     <ul id="landmarkList">
     </ul>
     <button type="button" id="deleteLandmark">Delete Landmark</button>
@@ -56,8 +62,6 @@
   <div id="details"></div>
 </div>  
 
-
-  
 <script src="app.js"></script>
 </body>
 </html>
