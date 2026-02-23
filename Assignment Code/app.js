@@ -49,7 +49,7 @@ if (!map){
       map.setCenter({lat: latitudeStart, lng: lonStart});
       map.setZoom(12);
     }
-landmarkform.reset();
+//landmarkform.reset();
   }
 
 function renderLandmarkList() {
