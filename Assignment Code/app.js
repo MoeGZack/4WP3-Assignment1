@@ -14,10 +14,13 @@ const landmarks=[];
 let map;
 
 
-function handleFindMe(){
+
+    function handleFindMe(){
     
       navigator.geolocation.getCurrentPosition( showPosition);
+     
     }
+
    window.addEventListener("load",handleFindMe);
     document.getElementById("useLocation").addEventListener("click",handleFindMe);
 
@@ -27,7 +30,8 @@ function showPosition(position){
     
       lat.value=position.coords.latitude;
       lon.value=position.coords.longitude;
-    
+    console.log("Latitude: " + lat.value +
+    " Longitude: " + lon.value);
 
   const latitudeStart=parseFloat(lat.value);
   const lonStart=parseFloat(lon.value);
@@ -41,10 +45,11 @@ if (!map){
             clickableIcons: false
           });
     } else {
+      
       map.setCenter({lat: latitudeStart, lng: lonStart});
       map.setZoom(12);
     }
-
+landmarkform.reset();
   }
 
 function renderLandmarkList() {
